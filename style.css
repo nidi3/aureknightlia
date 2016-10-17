@@ -63,12 +63,12 @@ label {
 }
 
 .visited {
-  background-image: url('cross.png');
+  background-image: url('src/cross.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .knight {
-  background-image: url('knight.png');
+  background-image: url('src/knight.png');
   background-size: contain;
 }
