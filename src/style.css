@@ -30,7 +30,7 @@ label {
 .field-container {
   top: 0;
   position: absolute;
-  margin-top: 10em;
+  margin-top: 12em;
   height: 100%;
   width: 100%;
 }
@@ -43,13 +43,32 @@ label {
 
 .field > div {
   text-align: center;
-  height: 38px;
 }
 
 .field > div > div {
-  height: 30px;
-  width: 30px;
   display: inline-block;
+}
+
+@media (orientation: landscape) {
+  .field > div {
+    height: calc(7vh + 8px);
+  }
+
+  .field > div > div {
+    height: calc(7vh);
+    width: calc(7vh);
+  }
+}
+
+@media (orientation: portrait) {
+  .field > div {
+    height: calc(9vw + 8px);
+  }
+
+  .field > div > div {
+    height: 9vw;
+    width: 9vw;
+  }
 }
 
 .black {
