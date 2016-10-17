@@ -1,0 +1,38 @@
+<template>
+  <require from="./style.css"></require>
+  <require from="./numeric-format"></require>
+
+  <div class="control">
+    <h1>${message} &nbsp;</h1>
+
+    <div class="line">
+      <label>Moves:</label>
+      <span class="data">${moves}</span>
+    </div>
+    <div class="line">
+      <label>Highscore:</label>
+      <span class="data">${high}</span>
+    </div>
+    <div class="line">
+      <label>Size:</label>
+      <input class="data" type="number" max="12" min="3" change.trigger="sizeChanged()"
+             value.bind="boardSize | numericFormat">
+    </div>
+
+    <div class="line">
+      <button click.trigger="init()">New Game</button>
+      <button click.trigger="hint()">Hint</button>
+    </div>
+  </div>
+
+  <div class="field-container">
+    <div class="field">
+      <div repeat.for="x of boardSize">
+        <div repeat.for="y of boardSize" click.trigger="moveTo(x,y)"
+             class="${(x+y)%2==0 ? 'black' : 'white'} ${x==knight.x && y==knight.y ? 'knight': ''} ${visited[x][y] ? 'visited':''}">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</template>

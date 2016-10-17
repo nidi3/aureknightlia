@@ -1,0 +1,74 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+label {
+  font-weight: bold;
+  float: left;
+}
+
+.line {
+  width: 15em;
+  height: 1em;
+  margin: auto;
+  clear: both;
+}
+
+.data {
+  float: right;
+}
+
+.control {
+  text-align: center;
+}
+
+.field-container {
+  top: 0;
+  position: absolute;
+  margin-top: 10em;
+  height: 100%;
+  width: 100%;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.field > div {
+  text-align: center;
+  height: 38px;
+}
+
+.field > div > div {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+}
+
+.black {
+  background-color: #666;
+  border: 4px solid #666;
+}
+
+.white {
+  background-color: #aaa;
+  border: 4px solid #aaa;
+}
+
+.visited {
+  background-image: url('/src/cross.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.knight {
+  background-image: url('/src/knight.png');
+  background-size: contain;
+}
