@@ -25,12 +25,10 @@
     </div>
   </div>
 
-  <div class="field-container">
-    <div class="field">
-      <div repeat.for="x of boardSize">
-        <div repeat.for="y of boardSize" click.trigger="moveTo(x,y)"
-             class="${(x+y)%2==0 ? 'black' : 'white'} ${x==knight.x && y==knight.y ? 'knight': ''} ${visited[x][y] ? 'visited':''}">
-        </div>
+  <div class="field">
+    <div repeat.for="x of boardSize">
+      <div repeat.for="y of boardSize" click.trigger="moveTo(x,y)"
+           class="${(x+y)%2==0 ? 'black' : 'white'} ${x==knight.x && y==knight.y ? 'knight': ''} ${visited[x][y] ? 'visited':''}">
       </div>
     </div>
   </div>
